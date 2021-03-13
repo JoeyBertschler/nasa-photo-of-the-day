@@ -5,9 +5,25 @@ import axios from "axios";
 import CounterComponent from "./components/Zoomyboy";
 import Header from './components/Header'
 import Body from './components/Body'
+import StyledButton from './components/StyledButton'
+// import RotatyThing from './components/RotatyThing'
+// import StyledTitle from './components/StyledTitle'
+import StyledButton2 from './components/StyledButton'
+import styled from 'styled-components'
+import AnotherButton from './components/AnotherButton'
+import TomatoButton from './components/AnotherButton'
+
+const WrappedDiv = styled.div`  
+  font-family: sans-serif;
+  text-align: center;
+  color: blue;
+`;
+
+const H1DivRed = styled.h1 `
+  color: red;
+`
 
 function App() {
-
 
 const [aState, setAState] = useState(100)
 console.log(aState + " indeed a state")
@@ -51,12 +67,23 @@ console.log(aState + " indeed a state")
 
   return (
     <div background-color="yellow" className="App" > 
+      <StyledButton2/>
+      {/* <StyledTitle/> */}
+      {/* <RotatyThing/> */}
+      <StyledButton>Text goes here</StyledButton>
       <Header/>
       <Body/>
+      <AnotherButton type="primary">Another Button, exercise </AnotherButton>
+      <AnotherButton type="sucess">Yet Another Button </AnotherButton>
+      <TomatoButton/>
       <p id="test" >
         Read through the instructions in the README.md file to build your NASA
         app! Have fu  n <span role="img" aria-label="go!">🚀</span>!
       </p>
+
+      <WrappedDiv>
+        <H1DivRed>Styled Components Playground Exercise Title</H1DivRed>
+      </WrappedDiv>
 
       <img src="https://media.tenor.com/images/cdfed1a6dcf16a9b1f84b21cdac076c4/tenor.gif" alt="doggo gif" width="125" height="150"/>
       <Child name="Edward" headset="logitech" arr={[1, 2, 3]} payAttentionToBrackets = {['brackets', 'twoOfThem']} aState={aState} /> 
